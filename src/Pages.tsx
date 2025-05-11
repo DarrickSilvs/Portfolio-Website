@@ -1,18 +1,26 @@
 import { Routes, Route, useNavigate } from "react-router"
-import StartPage from "./StartPage";
-import { useEffect } from "react";
+import StartPage from "./components/StartPage";
+import WelcomeScreen from "./components/WelcomeScreen";
+import { useEffect, useState } from "react";
 
 const Pages: React.FC =  () => {
+    const [started, setStarted] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
         navigate("/")
     }, [navigate]);
-    
+
     return (
-        <Routes>
-            <Route path="/" element={<StartPage />}/>
-        </Routes>
+        <>
+            {started ? (
+                <Routes>
+                    <Route path="/" element={<StartPage />}/>
+                </Routes>
+            ) : (
+                <WelcomeScreen onDone={() => setStarted(true)} />
+            )}
+        </>
     )
 }
 
