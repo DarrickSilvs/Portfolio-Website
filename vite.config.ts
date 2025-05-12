@@ -8,6 +8,15 @@ export default defineConfig({
     tailwindcss()
   ],
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
+        }
+      }
+    }
   }
 })
