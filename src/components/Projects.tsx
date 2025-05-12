@@ -28,7 +28,7 @@ const Projects: React.FC = () => {
                 >
                         {/* Project Image */}
                         <img
-                        src={`projects/${project.image}`}
+                        src={`/projects/${project.image}`}
                         alt={project.title}
                         className="w-full md:w-1/2 h-auto rounded shadow-md border border-green-700"
                         />
