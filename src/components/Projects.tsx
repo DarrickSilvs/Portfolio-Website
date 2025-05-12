@@ -1,8 +1,10 @@
+import websiteProjectImage from '../assets/projects/website-project.png';
+
 const projects = [
     {
       title: "Portfolio Website",
       description: "This is the portfolio you’re looking at. I built it using React, Tailwind, and TypeScript to create an interactive terminal-style experience, inspired by the macOS terminal and old-school BIOS aesthetics.",
-      image: "../assets/projects/website-project.png", // placeholder
+      image: websiteProjectImage,
       github: "https://github.com/DarrickSilvs/Portfolio-Website",
       tags: ["React", "TypeScript", "TailwindCSS", "Vite"],
     },
@@ -21,9 +23,9 @@ const Projects: React.FC = () => {
                 >
                         {/* Project Image */}
                         <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full md:w-1/2 h-auto rounded shadow-md border border-green-700"
+                            src={project.image}
+                            alt={project.title}
+                            className="w-full md:w-1/2 h-auto rounded shadow-md border border-green-700"
                         />
         
                         {/* Project Info */}
