@@ -8,10 +8,8 @@ const Help: React.FC = () => {
                     <h2 className="text-3xl mb-4 underline decoration-green-500">Available Commands</h2>
                     <ul className="list-disc pl-6 space-y-2">
                         <li><code className="text-green-500">help</code> — display this help menu</li>
-                        <li><code className="text-green-500">ls</code> — list all available sections</li>
-                        <li><code className="text-green-500">cd [section]</code> — go to a section (e.g. <code>cd about</code>)</li>
                         <li><code className="text-green-500">home</code> — return to home</li>
-                        <li><code className="text-green-500">clear</code> — clear the terminal</li>
+                        <li><code className="text-green-500">cd [section]</code> — go to a section (e.g. <code>cd about</code>)</li>
                         <li><code className="text-green-500">tab</code> — autocomplete commands or sections</li>
                     </ul>
                 </div>

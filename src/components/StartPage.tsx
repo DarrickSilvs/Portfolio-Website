@@ -12,19 +12,24 @@ const StartPage: React.FC = () => {
 
     const handleCommand = (cmd: string) => {
         switch (cmd.toLowerCase().trim()) {
+            case "cd home":
             case "home":
                 setComponent(<Home />);
                 break;
             case "cd resume":
+            case "resume":
                 setComponent(<Resume />);
                 break;
             case "cd about":
+            case "about":
                 setComponent(<About />);
                 break;
             case "cd contact":
+            case "contact":
                 setComponent(<Contact />);
                 break;
             case "cd projects":
+            case "projects":
                 setComponent(<Projects />);
                 break;
             case "help":
@@ -35,6 +40,20 @@ const StartPage: React.FC = () => {
         }
     };
 
+    const handleComplete = (currentInput: string) => {
+        const availableCommands = [
+            "cd home", "home", "help", "cd about", "about",
+            "cd projects", "projects", "cd resume", "resume",
+            "cd contact", "contact"
+        ];
+
+        const matches = availableCommands.filter((cmd) => 
+            cmd.startsWith(currentInput.toLowerCase())
+        );
+
+        return matches.length === 1 ? matches[0] : currentInput;
+    }
+
     useEffect(() => {
         setComponent(<Home />)
     }, [])
@@ -42,7 +61,7 @@ const StartPage: React.FC = () => {
     return (
         <div className="w-screen h-screen overflow-hidden bg-black text-green-500 font-mono flex flex-col">
             <div className="px-4 py-2 border-b border-green-700 bg-black fixed top-0 left-0 right-0 z-1 align-middle text-center mb-2">
-                <button className="hover:underline">
+                <button className="hover:underline" onClick={() => handleCommand("home")}>
                     <h1 className="text-4xl">Darrick Silvester</h1>
                 </button>
             </div>
@@ -70,9 +89,16 @@ const StartPage: React.FC = () => {
                 onChange={(e) => setCommand(e.target.value)}
                 onKeyDown={(e) => {
                     if (e.key === "Enter") {
-                        handleCommand(command)
-                        setCommand("")
-                    }}}
+                        handleCommand(command);
+                        setCommand("");
+                    }
+
+                    if (e.key === "Tab") {
+                        e.preventDefault();
+                        const completed = handleComplete(command);
+                        setCommand(completed);
+                    }
+                }}
                 />
             </div>
 
