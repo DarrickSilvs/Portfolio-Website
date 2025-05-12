@@ -9,4 +9,8 @@ export default defineConfig({
     react(), 
     tailwindcss()
   ],
+  build: {
+    // Ensure output directory matches gh-pages deployment
+    outDir: 'dist'
+  }
 })
