@@ -1,4 +1,4 @@
-import profileImg from "../assets/IMG_9094.jpg"
+import profileImg from "../assets/profile.jpg"
 
 const About: React.FC = () => {
     return (
