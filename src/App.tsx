@@ -1,17 +1,15 @@
-import {
-  BrowserRouter as Router,
-} from "react-router";
+import { useState } from "react";
+import WelcomeScreen from "./components/WelcomeScreen";
+import StartPage from "./components/StartPage";
 
-import "bootstrap/dist/css/bootstrap.min.css";
+const App: React.FC = () => {
+    const [started, setStarted] = useState(false);
 
-import Pages from "./Pages";
-
-const App = () => {
-  return (
-    <Router>
-      <Pages />
-    </Router>
-  );
+    return started ? (
+      <StartPage />
+    ) : (
+      <WelcomeScreen onDone={() => setStarted(true)} />
+    )
 }
 
-export default App
+export default App;

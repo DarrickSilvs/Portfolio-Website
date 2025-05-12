@@ -35,8 +35,8 @@ const WelcomeScreen: React.FC<{ onDone: () => void }> = (props) => {
                 <span className="blinking-cursor">|</span>
             </div>
             {showPrompt && 
-                <div className="mt-4 opacity-80">
-                    <span className="blinking-cursor">{prompt}</span>
+                <div className="mt-10 text-3xl opacity-80">
+                    <span className="blinking-text">{prompt}</span>
                 </div>
             }
         </div>

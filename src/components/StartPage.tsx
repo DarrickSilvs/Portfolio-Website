@@ -1,22 +1,41 @@
-import { useNavigate } from "react-router";
-
+import Error from "./Error";
+import Help from "./Help";
+import { useState, type JSX } from "react";
 const StartPage: React.FC = () => {
-    const navigate = useNavigate();
+    const [component, setComponent] = useState<JSX.Element | null>(null);
+    const [command, setCommand] = useState("");
+
+    const handleCommand = (cmd: string) => {
+        switch (cmd.toLowerCase().trim()) {
+            case "home":
+                setComponent(null);
+                break;
+            case "help":
+                setComponent(<Help />);
+                break;
+            default:
+                setComponent(<Error />);
+        }
+    };
 
     return (
         <div className="w-screen h-screen overflow-hidden bg-black text-green-500 font-mono flex flex-col">
-            <div className="px-4 py-2 border-b border-green-700 bg-black fixed top-0 left-0 right-0 z-1 align-middle text-center">
-                <button className="hover:underline" onClick={() => navigate("/")}>
-                    <h1 className="text-xl">Darrick Silvester</h1>
+            <div className="px-4 py-2 border-b border-green-700 bg-black fixed top-0 left-0 right-0 z-1 align-middle text-center mb-2">
+                <button className="hover:underline">
+                    <h1 className="text-4xl">Darrick Silvester</h1>
                 </button>
             </div>
 
-            <div className="mt-12 px-10 py-2 border-b border-green-700 flex gap-10 bg-black text-base fixed top-[2.5rem] left-0 right-0 z-10 justify-evenly">
-                <button className="hover:underline" onClick={() => navigate("/")}>Home</button>
-                <button className="hover:underline">About</button>
-                <button className="hover:underline">Projects</button>
-                <button className="hover:underline">Resume</button>
-                <button className="hover:underline">Contact</button>
+            <div className="mt-5 px-10 py-2 border-b border-green-700 flex gap-10 bg-black text-base fixed top-[2.5rem] left-0 right-0 z-10 justify-evenly">
+                <button className="hover:underline" onClick={() => handleCommand("home")}>Home</button>
+                <button className="hover:underline" onClick={() => handleCommand("about")}>About</button>
+                <button className="hover:underline" onClick={() => handleCommand("projects")}>Projects</button>
+                <button className="hover:underline" onClick={() => handleCommand("resume")}>Resume</button>
+                <button className="hover:underline" onClick={() => handleCommand("contact")}>Contact</button>
+            </div>
+
+            <div className="flex-grow flex justify-center items-center">
+                {component}
             </div>
 
             <div className="px-4 py-2 border-t border-green-700 bg-black fixed bottom-0 left-0 right-0 z-10">
@@ -25,6 +44,14 @@ const StartPage: React.FC = () => {
                 type="text"
                 className="bg-black text-green-500 outline-none ml-2 w-4/5 caret-green-500"
                 autoFocus
+                value={command}
+                placeholder='type "help" to get started'
+                onChange={(e) => setCommand(e.target.value)}
+                onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                        handleCommand(command)
+                        setCommand("")
+                    }}}
                 />
             </div>
 
