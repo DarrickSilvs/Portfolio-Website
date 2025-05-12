@@ -1,11 +1,11 @@
 const Resume: React.FC = () => {
     const handleViewAndDownload = () => {
         // Open resume in new tab
-        window.open("/DARRICK_SILVESTER_RESUME.pdf", "_blank");
+        window.open("../assets/DARRICK_SILVESTER_RESUME.pdf", "_blank");
       
         // Trigger a background download
         const link = document.createElement("a");
-        link.href = "/DARRICK_SILVESTER_RESUME.pdf";
+        link.href = "../assets/DARRICK_SILVESTER_RESUME.pdf";
         link.download = "DARRICK_SILVESTER_RESUME.pdf";
         document.body.appendChild(link);
         link.click();
