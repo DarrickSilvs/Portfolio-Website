@@ -19,6 +19,9 @@ export default defineConfig({
           if (extType === 'css') {
             return 'assets/css/[name].[hash][extname]';
           }
+          if (extType === 'pdf') {
+            return 'assets/[name][extname]';
+          }
           return `assets/${extType}/[name].[hash][extname]`;
         },
         chunkFileNames: 'assets/js/[name].[hash].js',
