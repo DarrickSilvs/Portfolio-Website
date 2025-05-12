@@ -21,7 +21,7 @@ const WelcomeScreen: React.FC<{ onDone: () => void }> = (props) => {
                     return prev;
                 }
             });
-        }, 120)
+        }, 100)
         return () => clearInterval(interval);
     }, []);
 

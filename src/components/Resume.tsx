@@ -1,11 +1,12 @@
+import resumePdf from '../assets/DARRICK_SILVESTER_RESUME.pdf';
 const Resume: React.FC = () => {
     const handleViewAndDownload = () => {
         // Open resume in new tab
-        window.open("../assets/DARRICK_SILVESTER_RESUME.pdf", "_blank");
+        window.open(resumePdf, "_blank");
       
         // Trigger a background download
         const link = document.createElement("a");
-        link.href = "../assets/DARRICK_SILVESTER_RESUME.pdf";
+        link.href = resumePdf;
         link.download = "DARRICK_SILVESTER_RESUME.pdf";
         document.body.appendChild(link);
         link.click();

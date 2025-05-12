@@ -2,17 +2,10 @@ const projects = [
     {
       title: "Portfolio Website",
       description: "This is the portfolio you’re looking at. I built it using React, Tailwind, and TypeScript to create an interactive terminal-style experience, inspired by the macOS terminal and old-school BIOS aesthetics.",
-      image: "website-project.png", // placeholder
+      image: "../assets/projects/website-project.png", // placeholder
       github: "https://github.com/DarrickSilvs/Portfolio-Website",
       tags: ["React", "TypeScript", "TailwindCSS", "Vite"],
     },
-    // {
-    //   title: "Placeholder Project",
-    //   description:
-    //     "A boilerplate space for future projects. Will be replaced with real work soon — stay tuned.",
-    //   image: "/projects/placeholder.png",
-    //   github: "#",
-    // },
 ];
 
 const Projects: React.FC = () => {
@@ -28,7 +21,7 @@ const Projects: React.FC = () => {
                 >
                         {/* Project Image */}
                         <img
-                        src={`../assets/projects/${project.image}`}
+                        src={project.image}
                         alt={project.title}
                         className="w-full md:w-1/2 h-auto rounded shadow-md border border-green-700"
                         />
