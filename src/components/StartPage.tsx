@@ -1,6 +1,7 @@
 import Error from "./Error";
 import Help from "./Help";
 import Home from "./Home";
+import Resume from "./Resume";
 import { useEffect, useState, type JSX } from "react";
 const StartPage: React.FC = () => {
     const [component, setComponent] = useState<JSX.Element | null>(null);
@@ -10,6 +11,9 @@ const StartPage: React.FC = () => {
         switch (cmd.toLowerCase().trim()) {
             case "home":
                 setComponent(<Home />);
+                break;
+            case "cd resume":
+                setComponent(<Resume />);
                 break;
             case "help":
                 setComponent(<Help />);
@@ -33,10 +37,10 @@ const StartPage: React.FC = () => {
 
             <div className="mt-5 px-10 py-2 border-b border-green-700 flex gap-10 bg-black text-base fixed top-[2.5rem] left-0 right-0 z-10 justify-evenly">
                 <button className="hover:underline" onClick={() => handleCommand("home")}>Home</button>
-                <button className="hover:underline" onClick={() => handleCommand("about")}>About</button>
-                <button className="hover:underline" onClick={() => handleCommand("projects")}>Projects</button>
-                <button className="hover:underline" onClick={() => handleCommand("resume")}>Resume</button>
-                <button className="hover:underline" onClick={() => handleCommand("contact")}>Contact</button>
+                <button className="hover:underline" onClick={() => handleCommand("cd about")}>About</button>
+                <button className="hover:underline" onClick={() => handleCommand("cd projects")}>Projects</button>
+                <button className="hover:underline" onClick={() => handleCommand("cd resume")}>Resume</button>
+                <button className="hover:underline" onClick={() => handleCommand("cd contact")}>Contact</button>
             </div>
 
             <div className="flex-1 h-full flex justify-center items-center">
