@@ -1,6 +1,7 @@
 import Error from "./Error";
 import Help from "./Help";
-import { useState, type JSX } from "react";
+import Home from "./Home";
+import { useEffect, useState, type JSX } from "react";
 const StartPage: React.FC = () => {
     const [component, setComponent] = useState<JSX.Element | null>(null);
     const [command, setCommand] = useState("");
@@ -8,7 +9,7 @@ const StartPage: React.FC = () => {
     const handleCommand = (cmd: string) => {
         switch (cmd.toLowerCase().trim()) {
             case "home":
-                setComponent(null);
+                setComponent(<Home />);
                 break;
             case "help":
                 setComponent(<Help />);
@@ -17,6 +18,10 @@ const StartPage: React.FC = () => {
                 setComponent(<Error />);
         }
     };
+
+    useEffect(() => {
+        setComponent(<Home />)
+    }, [])
 
     return (
         <div className="w-screen h-screen overflow-hidden bg-black text-green-500 font-mono flex flex-col">
@@ -34,7 +39,7 @@ const StartPage: React.FC = () => {
                 <button className="hover:underline" onClick={() => handleCommand("contact")}>Contact</button>
             </div>
 
-            <div className="flex-grow flex justify-center items-center">
+            <div className="flex-1 h-full flex justify-center items-center">
                 {component}
             </div>
 
