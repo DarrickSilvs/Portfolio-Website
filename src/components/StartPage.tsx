@@ -3,6 +3,7 @@ import Help from "./Help";
 import Home from "./Home";
 import Resume from "./Resume";
 import About from "./About";
+import Contact from "./Contact";
 import { useEffect, useState, type JSX } from "react";
 const StartPage: React.FC = () => {
     const [component, setComponent] = useState<JSX.Element | null>(null);
@@ -18,6 +19,9 @@ const StartPage: React.FC = () => {
                 break;
             case "cd about":
                 setComponent(<About />);
+                break;
+            case "cd contact":
+                setComponent(<Contact />);
                 break;
             case "help":
                 setComponent(<Help />);
