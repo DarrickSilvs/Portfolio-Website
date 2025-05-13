@@ -23,6 +23,7 @@ const Help: React.FC = () => {
               <li>Try typing an invalid command for a surprise</li>
               <li>Commands are case-insensitive</li>
               <li>Explore freely — it's your terminal</li>
+              <li>This website is best used on a desktop!</li>
             </ul>
           </div>
         </div>
