@@ -35,7 +35,7 @@ const Help: React.FC = () => {
           </h2>
           <p className="text-base sm:text-lg text-green-300 max-w-2xl mx-auto leading-relaxed">
             This portfolio is fully interactive. Treat it like a real terminal — type, explore, and discover.<br />
-            Try <code className="text-green-500">ls</code> or <code className="text-green-500">cd about</code> to start.
+            Try <code className="text-green-500">cd about</code> to start.
           </p>
         </div>
       </div>
