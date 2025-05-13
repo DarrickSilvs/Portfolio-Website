@@ -11,26 +11,12 @@ const Contact: React.FC = () => {
         {/* Info grid */}
         <div className="w-full max-w-2xl">
           <div className="grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-y-3 gap-x-4 text-left">
-            <span className="text-green-500">email (personal):</span>
+            <span className="text-green-500">email:</span>
             <a
-              href="mailto:darricksilvester@gmail.com"
+              href="mailto:dsilveste.dev@gmail.com"
               className="hover:underline break-words"
             >
-              darricksilvester@gmail.com
-            </a>
-            <span className="text-green-500">email (UNSW):</span>
-            <a
-              href="mailto:d.silvester@student.unsw.edu.au"
-              className="hover:underline break-words"
-            >
-              d.silvester@student.unsw.edu.au
-            </a>
-            <span className="text-green-500">phone:</span>
-            <a
-              href="tel:+61416340343"
-              className="hover:underline"
-            >
-              +61 416 340 343
+              dsilvester.dev@gmail.com
             </a>
           </div>
         </div>
