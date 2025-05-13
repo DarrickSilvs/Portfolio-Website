@@ -1,54 +1,16 @@
-# React + TypeScript + Vite
+# My Portfolio Website
+A minimalist, terminal-style portfolio website inspired by a retro BIOS interface. It supports basic commands like help and cd, along with tab autocomplete for navigation. Visitors can explore my work through a stripped-down, command-line experience that highlights simplicity and creativity.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Link to project:** https://portfolio-website-murex-pi-62.vercel.app/
 
-Currently, two official plugins are available:
+![Screenshot](https://raw.githubusercontent.com/DarrickSilvs/Portfolio-Website/main/src/assets/projects/website-project.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How It's Made:
 
-## Expanding the ESLint configuration
+**Tech used:** HTML, CSS, TypeScript, React
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Built with React to simulate a terminal-style interface in the browser. The site supports a minimal set of commands like help and cd, with tab autocomplete for smoother navigation. I used simple state management and command parsing logic to handle user input and render dynamic content. The BIOS-inspired look is achieved using custom CSS and monospaced fonts to evoke a retro, boot-screen aesthetic.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Lessons Learned:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Building a functional fake terminal taught me a lot about managing input state, keyboard events, and non-traditional UX flows. It also reminded me that simple HTML and CSS can still create unique experiences when used creatively. Most importantly, I saw how fun it can be to build something that reflects personality, not just functionality.
