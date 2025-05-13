@@ -60,13 +60,13 @@ const StartPage: React.FC = () => {
 
     return (
         <div className="w-screen h-screen overflow-hidden bg-black text-green-500 font-mono flex flex-col">
-            <div className="px-4 py-2 border-b border-green-700 bg-black fixed top-0 left-0 right-0 z-10 align-middle text-center">
+            <div className="h-12 px-4 py-2 border-b border-green-700 bg-black fixed top-0 left-0 right-0 z-10 text-center">
                 <button className="hover:underline" onClick={() => handleCommand("home")}>
                     <h1 className="text-2xl sm:text-3xl md:text-4xl">Darrick Silvester</h1>
                 </button>
             </div>
 
-            <div className="px-4 sm:px-10 py-2 border-b border-green-700 flex flex-wrap gap-2 sm:gap-10 bg-black text-xs sm:text-base fixed top-[3.1rem] sm:top-[3.1rem] md:top-[3.2rem] lg:top-[3.3rem] left-0 right-0 z-10 justify-center sm:justify-evenly">
+            <div className="h-10 px-4 sm:px-10 border-b border-green-700 flex flex-wrap gap-2 sm:gap-10 bg-black text-xs sm:text-base fixed top-12 left-0 right-0 z-10 justify-center sm:justify-evenly">
                 <button className="hover:underline px-2 sm:px-0 whitespace-nowrap" onClick={() => handleCommand("home")}>
                     Home
                 </button>
@@ -84,7 +84,7 @@ const StartPage: React.FC = () => {
                 </button>
             </div>
 
-            <div className="flex-1 overflow-y-auto pt-[7rem] pb-[4rem] px-4 sm:px-10">
+            <div className="flex-1 overflow-y-auto pt-[5.5rem] pb-[4rem] px-4 sm:px-10">
                 {component}
             </div>
 

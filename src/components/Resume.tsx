@@ -14,12 +14,14 @@ const Resume: React.FC = () => {
     };
 
     return (
-        <button
-            onClick={handleViewAndDownload}
-            className="mt-4 inline-block px-4 py-2 border border-green-500 text-green-500 hover:bg-green-500 hover:text-black transition-colors"
-        >
-            View & Download Resume
-        </button>
+        <div className="h-full flex items-center justify-center">
+            <button
+                onClick={handleViewAndDownload}
+                className="px-6 py-3 border border-green-500 text-green-500 hover:bg-green-500 hover:text-black transition-colors text-sm sm:text-base"
+            >
+                View & Download Resume
+            </button>
+        </div>
     )
 }
 
