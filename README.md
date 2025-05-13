@@ -3,7 +3,7 @@ A minimalist, terminal-style portfolio website inspired by a retro BIOS interfac
 
 **Link to project:** https://portfolio-website-murex-pi-62.vercel.app/
 
-![alt tag]([http://placecorgi.com/1200/650](https://tinyurl.com/y7zax635))
+![alt tag](https://tinyurl.com/y7zax635)
 
 ## How It's Made:
 
