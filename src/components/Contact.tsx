@@ -7,20 +7,20 @@ const Contact: React.FC = () => {
         <h2 className="text-2xl sm:text-4xl underline decoration-green-500 mb-4 sm:mb-7 text-center">
           Contact Information
         </h2>
-        
-        {/* Info grid */}
-        <div className="w-full max-w-2xl">
-          <div className="grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-y-3 gap-x-4 text-left">
-            <span className="text-green-500">email:</span>
+
+        {/* Email */}
+        <div className="w-full max-w-md text-center space-y-2">
+          <div>
+            <span className="text-green-500 block sm:inline">email:</span>{' '}
             <a
-              href="mailto:dsilveste.dev@gmail.com"
+              href="mailto:dsilvester.dev@gmail.com"
               className="hover:underline break-words"
             >
               dsilvester.dev@gmail.com
             </a>
           </div>
         </div>
-        
+
         {/* Social buttons */}
         <div className="mt-6 flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center w-full max-w-lg">
           <a
