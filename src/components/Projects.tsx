@@ -11,7 +11,7 @@ const projects = [
   },
   {
     title: "CLI File Organizer",
-    desription: "A simple Rust tool that organizes files by extension. I built it after completing a uni Rust course to apply what I learned.",
+    description: "A simple Rust tool that organizes files by extension. I built it after completing a uni Rust course to apply what I learned.",
     image: cliOrganizerProjectImage,
     github: "https://github.com/DarrickSilvs/cli-organizer",
     tags: ["Rust", "Clap", "File System", "CLI"],
