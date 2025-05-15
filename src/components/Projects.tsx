@@ -1,4 +1,5 @@
 import websiteProjectImage from '../assets/projects/website-project.png';
+import cliOrganizerProjectImage from '../assets/projects/cli-organizer-project.png';
 
 const projects = [
   {
@@ -8,6 +9,13 @@ const projects = [
     github: "https://github.com/DarrickSilvs/Portfolio-Website",
     tags: ["React", "TypeScript", "TailwindCSS", "Vite"],
   },
+  {
+    title: "CLI File Organizer",
+    desription: "A simple Rust tool that organizes files by extension. I built it after completing a uni Rust course to apply what I learned.",
+    image: cliOrganizerProjectImage,
+    github: "https://github.com/DarrickSilvs/cli-organizer",
+    tags: ["Rust", "Clap", "File System", "CLI"],
+  }
 ];
 
 const Projects: React.FC = () => {
