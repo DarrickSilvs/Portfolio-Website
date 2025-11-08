@@ -15,7 +15,7 @@ const projects = [
     description: "A secure file deletion CLI-tool that safely deletes files permanently on the OS level, making files unrecoverable even by forensic means.",
     image: cliSecureFileDeletionImage,
     github: "https://github.com/DarrickSilvs/secure-file-deletion",
-    tags: ["Rust", "File System", "OS", "CLI"]
+    tags: ["Rust", "File System", "OsRng", "CLI"]
   },
   {
     title: "CLI File Organizer",
