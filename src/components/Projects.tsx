@@ -1,5 +1,6 @@
 import websiteProjectImage from '../assets/projects/website-project.png';
 import cliOrganizerProjectImage from '../assets/projects/cli-organizer-project.png';
+import cliSecureFileDeletionImage from '../assets/projects/cli-secure-file-deletion.png';
 
 const projects = [
   {
@@ -15,6 +16,13 @@ const projects = [
     image: cliOrganizerProjectImage,
     github: "https://github.com/DarrickSilvs/cli-organizer",
     tags: ["Rust", "Clap", "File System", "CLI"],
+  },
+  {
+    title: "Secure File Deletion",
+    description: "A secure file deletion CLI-tool that safely deletes files permanently on the OS level, making files unrecoverable even by forensic means.",
+    image: cliSecureFileDeletionImage,
+    github: "https://github.com/DarrickSilvs/secure-file-deletion",
+    tags: ["Rust", "File System", "OS", "CLI"]
   }
 ];
 
