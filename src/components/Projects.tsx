@@ -11,19 +11,19 @@ const projects = [
     tags: ["React", "TypeScript", "TailwindCSS", "Vite"],
   },
   {
+    title: "Secure File Deletion",
+    description: "A secure file deletion CLI-tool that safely deletes files permanently on the OS level, making files unrecoverable even by forensic means.",
+    image: cliSecureFileDeletionImage,
+    github: "https://github.com/DarrickSilvs/secure-file-deletion",
+    tags: ["Rust", "File System", "OS", "CLI"]
+  },
+  {
     title: "CLI File Organizer",
     description: "A simple Rust tool that organizes files by extension. I built it after completing a uni Rust course to apply what I learned.",
     image: cliOrganizerProjectImage,
     github: "https://github.com/DarrickSilvs/cli-organizer",
     tags: ["Rust", "Clap", "File System", "CLI"],
   },
-  {
-    title: "Secure File Deletion",
-    description: "A secure file deletion CLI-tool that safely deletes files permanently on the OS level, making files unrecoverable even by forensic means.",
-    image: cliSecureFileDeletionImage,
-    github: "https://github.com/DarrickSilvs/secure-file-deletion",
-    tags: ["Rust", "File System", "OS", "CLI"]
-  }
 ];
 
 const Projects: React.FC = () => {
